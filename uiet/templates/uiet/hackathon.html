@@ -1,0 +1,22 @@
+{% extends 'uiet/base.html' %}
+{% block body %}
+
+
+<div class="jumbotron mt-4">
+  <h1 class="display-4">Cryptography</h1>
+  <p>Cryptography consist of three questions and you all questions are mandatory . Flag - 1 is of 20 points </p>
+  <a class="btn btn-primary" href="{% url 'crypto' %}">Click here to start </a>
+</div>
+<div class="jumbotron">
+  <h1 class="display-4">Networking</h1>
+  <p>Networking consist of three questions and you all questions are mandatory . Flag - 1 is of 20 points </p>
+  <a class="btn btn-primary" href="{% url 'networking' %}">Click here to start </a>
+</div>
+<div class="jumbotron">
+  <h1 class="display-4">Forensic</h1>
+  <p>Forensics consist of three questions and you all questions are mandatory . Flag - 1 is of 20 points </p>
+  <a class="btn btn-primary" href="{% url 'forensic' %}">Click here to start </a>
+</div>
+
+{% endblock body %}
+{% block title %} Hackathon{% endblock title%}

@@ -1,0 +1,18 @@
+{% extends 'uiet/base.html' %}
+{% block title %} Register {% endblock title %}
+{% block body %}
+<form method="POST" class="form-group text-white mt-4">
+    {% csrf_token %}
+    {% for i in form %}
+        {{i.label_tag}} {{i}} <span class="text-warning"> {{i.errors|striptags}} </span>
+    <br>
+    {% endfor %}
+    <input type="Submit" value="Sign Up" class="btn btn-primary">
+</form>
+<a href="{% url 'log_in' %}">Login Here</a>
+{% if messages %}
+    {% for i in messages %}
+        {{i}}
+    {% endfor %}
+{% endif %}
+{% endblock body %}

@@ -1,0 +1,25 @@
+{% extends 'uiet/base.html' %}
+{% load static %}
+{% block title  %}
+Login {% endblock title %}
+{% block body %}
+<div class="container">
+    <form method="POST" class="form-group text-white mt-4">
+        {% csrf_token %}
+
+    {% for i in form %}
+        {{i.label_tag}} {{i}} <span class="text-warning"> {{i.errors|striptags}} </span>
+    <br><br>
+    {% endfor %}
+    <input type="Submit" value="Login" class="btn btn-primary">
+
+    </form>
+    </div>
+<span class="text-white">Don't have an account . Register Yourself here : </span><a class="text-warning" href="{% url 'register' %}">Click Here</a>
+{% if messages %}
+{% for i in messages %}
+<span class="text-white">{{i}}</span>
+{% endfor %}
+{% endif %}
+{% endblock body %}
+

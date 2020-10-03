@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'uiet/css/bootstrap.css' %}">
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body class="bg-secondary">
+    {% include 'uiet/navbar.html' %}
+
+    <div class="container">
+
+        {% block body %}{% endblock body %}</div>
+    {% block navbar_below %} {% endblock navbar_below%}
+
+    <script src="{% static 'uiet/js/jquery.js' %}"></script>
+    <script src="{% static 'uiet/js/popper.js' %}"></script>
+    <script src="{% static 'uiet/js/bootstrap.js' %}"></script>
+
+</body>
+</html>

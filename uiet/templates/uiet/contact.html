@@ -1,0 +1,17 @@
+{% extends 'uiet/base.html' %}
+{% block title %}Contact{% endblock title %}
+{% block body %}
+<form method="POST" class="form-group text-white mt-4">
+    {% csrf_token %}
+    {% for i in form %}
+        {{i.label_tag}} {{i}} {{i.errors|striptags}}
+    <br>
+    {% endfor %}
+    <input value="Submit" type="Submit" class="btn btn-primary">
+</form>
+{% if messages %}
+    {% for i in messages %}
+<span class="text-white">{{i}}</span>
+    {% endfor %}
+{% endif %}
+{% endblock body %}

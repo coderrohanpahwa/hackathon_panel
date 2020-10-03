@@ -1,0 +1,52 @@
+{% extends 'uiet/base.html' %}
+{% load static %}
+{% block title %}Cryptography{% endblock title %}
+{% block body %}
+<div class="jumbotron mt-4">
+  <h1 class="display-4">Flag - 1</h1>
+  <p class="lead">Description of Flag-1</p>
+  <a href="{% static 'uiet/crypto-questions/crypto-ques-1.txt' %}">Flag 1</a>
+  <form method="POST">
+    {% csrf_token %}
+    {% for i in form %}
+        {% if i.id_for_label == 'id_answer' %}
+            {{i.label_tag}} {{i}}
+        {% endif %}
+    {% endfor %}
+    <input value="Submit Flag" type="Submit">
+  </form>
+</div>
+<div class="jumbotron">
+  <h1 class="display-4">Flag - 2</h1>
+  <p class="lead">Description of Flag-2</p>
+   <a href="{% static 'uiet/crypto-questions/crypto-ques-2.txt' %}">Flag 2</a>
+  <form method="POST">
+    {% csrf_token %}
+    {% for i in form %}
+        {% if i.id_for_label == 'id_answer' %}
+            {{i.label_tag}} {{i}}
+        {% endif %}
+    {% endfor %}
+
+ <input value="Submit Flag" type="Submit">
+  </form>
+</div>
+
+<div class="jumbotron">
+  <h1 class="display-4">Flag - 3</h1>
+  <p class="lead">Description of Flag-3</p>
+  <a href="{% static 'uiet/crypto-questions/crypto-ques-3.txt' %}">Flag 3</a>
+  <form method="POST">
+    {% csrf_token %}
+    {% for i in form %}
+        {% if i.id_for_label == 'id_answer' %}
+            {{i.label_tag}} {{i}}
+        {% endif %}
+    {% endfor %}
+    <input value="Submit Flag" type="Submit">
+  </form>
+</div>
+{% endblock body %}
+{% block navbar_below %}
+{% include 'uiet/navbar_below.html' %}
+{% endblock navbar_below %}
