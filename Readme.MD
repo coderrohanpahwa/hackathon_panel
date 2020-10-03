@@ -3,7 +3,12 @@ Django==3.1.2
 
 Commands : 
  > python manage.py createsuperuser
-	#Enter name,email,password
+
+
+#Enter name,email,password
+ 
+ 
+ 
  > python manage.py runserver
 
 
