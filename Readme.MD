@@ -8,5 +8,8 @@ Commands :
 
 
 #admin pannel  
-If locally hosted : 127.0.0.1:8000/admin and enter details that you have entered while creating super user
-If hosted on server write : host_address/admin and enter details that you have entered while creating super user
+If locally hosted : 127.0.0.1:8000/admin and enter details that you have entered while creating super user.
+
+
+
+If hosted on server write : host_address/admin and enter details that you have entered while creating super user.
