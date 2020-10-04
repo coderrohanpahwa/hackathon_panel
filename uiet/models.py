@@ -12,3 +12,9 @@ class Scoreboard(models.Model):
     answer=models.CharField(max_length=100)
     def __str__(self):
         return self.name
+class Answer(models.Model):
+    name=models.CharField(max_length=100,null=True)
+    answer=models.CharField(max_length=100,null=True)
+    username=models.CharField(max_length=100,null=True)
+    def __str__(self):
+        return self.name

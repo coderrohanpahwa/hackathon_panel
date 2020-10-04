@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm,AuthenticationForm,UsernameField
-from .models import Contact,Scoreboard
+from .models import Contact,Scoreboard,Answer
 class SignUpForm(UserCreationForm):
     password1 = forms.CharField(widget=forms.PasswordInput(attrs={'class':'form-control'}),label="Enter Password")
     password2 = forms.CharField(widget=forms.PasswordInput(attrs={'class':'form-control'}),label="Re-Enter Password")
@@ -38,3 +38,7 @@ class ScoreboardForm(forms.ModelForm):
     class Meta:
         model=Scoreboard
         fields=['name','username','score','answer']
+class AnswerForm(forms.ModelForm):
+    class Meta:
+        model=Answer
+        fields=['name','username','answer']
